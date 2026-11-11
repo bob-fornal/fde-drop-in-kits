@@ -18,3 +18,39 @@ For each applicable combination, record where tokens live, how `DESIGN.md`
 names map to the actual theme, and which component states and modes were checked.
 Validate contrast for real foreground/background pairs, not isolated palette
 swatches. Avoid claiming a mapping works until checked against the project.
+
+## Mapping workflow
+
+- Angular + Angular Material: inspect the project's Material theme and global
+  styles, then map verified roles and component states to that version's theming
+  API. Exercise focus, disabled and error states in the existing components.
+- Vue + Ant Design Vue: inspect the app-level provider and its existing
+  configuration. Map only supported tokens, and check overrides and components
+  across configured modes and viewport sizes.
+- React + Ant Design: inspect `ConfigProvider` and theme overrides. Check that
+  component tokens and state-specific styling follow the installed API.
+- React + MUI: inspect the `ThemeProvider` theme and component overrides.
+  Map palette roles, typography and shape without bypassing existing providers.
+- Tailwind with Angular, Vue or React: inspect the version's theme configuration
+  and existing utilities. Map approved design values to the active theme and
+  verify rendered markup, focus and responsive variants in that framework.
+
+An illustrative front matter structure for **verified** project values is
+shown below. The keys are a local convention, not a standardized validator
+schema; use the names and structure the project already uses. The values are
+examples only and must not be adopted as the client's brand without approval.
+
+```yaml
+tokens:
+  colors:
+    text: "#111111"
+    surface: "#ffffff"
+  typography:
+    body: "system-ui, sans-serif"
+  spacing:
+    unit: "4px"
+```
+
+In the Markdown body, document the source file for each mapping, actual usage
+and tested foreground/background pairs. Do not copy illustrative values into
+implementation until verified and approved.

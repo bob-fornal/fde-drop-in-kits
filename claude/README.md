@@ -6,6 +6,14 @@ overwrite existing project instructions. Copy `.claude/skills/<name>/` into
 `~/.claude/skills/` instead for personal use. Copy the role wrappers in
 `.claude/agents/` along with the skills they reference.
 
+Review any existing `DESIGN.md` before merging the empty starter. The three
+layers are `AGENTS.md` (behavior), `SKILL.md` (procedures), and `DESIGN.md`
+(visual intent and YAML tokens). Use `/manage-design` to discover and document
+approved values, `/design-ui-component` for UI changes, and
+`/accessibility-audit` for accessibility checks. The design and accessibility
+agents wrap these skills; they do not enforce permissions or WCAG conformance.
+Stack-specific guidance is in `.claude/skills/manage-design/references/stacks.md`.
+
 Run `/onboard` to discover the stack and propose verified commands and
 architecture. Use `/blast-radius` before changes, `/repro` for bugs,
 `/implement-issue` and `/tdd` for implementation, `/reflect` for checkpoints,

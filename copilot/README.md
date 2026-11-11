@@ -5,6 +5,20 @@ existing `AGENTS.md`, `REVIEW.md`, `.github/`, and `.claude/` files. Never
 overwrite existing project instructions. Copy `.claude/skills/<name>/` into
 `~/.claude/skills/` instead for personal use where the client supports it.
 
+Review any existing `DESIGN.md` before merging the empty starter. The three
+layers are `AGENTS.md` (behavior), `SKILL.md` (procedures), and `DESIGN.md`
+(visual intent and YAML tokens). Use `/manage-design` to discover and document
+approved values, `/design-ui-component` for UI changes, and
+`/accessibility-audit` for accessibility checks. Stack-specific guidance is in
+`.claude/skills/manage-design/references/stacks.md`.
+
+The optional `agent-templates/` directory contains Copilot custom-agent
+definitions for design and accessibility; it is not automatically discovered.
+After reviewing and adapting their tools for the target client, copy the desired
+`.agent.md` files into the target repository's `.github/agents/` directory.
+The templates are behavioral guidance, not access controls or a WCAG
+conformance guarantee.
+
 Run `/onboard` to discover the stack and propose verified commands and
 architecture. Use `/blast-radius` before changes, `/repro` for bugs,
 `/implement-issue` and `/tdd` for implementation, `/reflect` for checkpoints,
