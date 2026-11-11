@@ -18,5 +18,7 @@
 - Match existing conventions and keep changes scoped to the request.
 - Add unit tests for new business logic and regression tests for bug fixes when
   a test infrastructure exists; report when it does not.
+- For UI changes, consult `DESIGN.md` and run the relevant design and
+  accessibility skills; preserve existing design system and accessibility rules.
 - Do not add external dependencies unless explicitly requested.
 - Preserve existing project-specific instructions when adapting this file.

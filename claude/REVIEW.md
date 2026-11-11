@@ -7,5 +7,7 @@
 - Review authorization, untrusted input, injection, sensitive data exposure,
   dependency changes and operational or migration risks.
 - Verify documentation and rollback or deployment guidance for affected behavior.
+- Review UI changes against `DESIGN.md` and check accessibility evidence,
+  including keyboard, focus, semantics and contrast; note untested states.
 - Report actionable findings with severity, location and reproduction; distinguish
   confirmed defects from questions and avoid unrelated style-only feedback.
