@@ -4,6 +4,8 @@ Merge the contents of this folder into the target repository root after reviewin
 existing `AGENTS.md`, `REVIEW.md`, `.github/`, and `.claude/` files. Never
 overwrite existing project instructions. Copy `.claude/skills/<name>/` into
 `~/.claude/skills/` instead for personal use where the client supports it.
+Use the repository's root README for the full three-way upgrade, removal,
+security and compatibility checklist before copying the kit.
 
 Review any existing `DESIGN.md` before merging the empty starter. The three
 layers are `AGENTS.md` (behavior), `SKILL.md` (procedures), and `DESIGN.md`

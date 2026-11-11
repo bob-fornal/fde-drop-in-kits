@@ -13,8 +13,9 @@
 ## Repository Map & Commands
 - `copilot/` and `claude/` are separate drop-in kits. Each contains a copy of
   the portable skills; keep corresponding skill instructions in sync.
-- Install, test, lint, typecheck and build: not applicable; no project tooling or
-  application is currently defined. Check Markdown and workflow changes manually.
+- Kit validation: `ruby tests/kit.test.rb` (Ruby with standard-library Minitest).
+- Fixture test: `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests/fixtures/legacy-app`.
+- No application build, lint or typecheck commands are defined.
 
 ## Coding Standards
 - Match existing conventions and keep changes scoped to the request.

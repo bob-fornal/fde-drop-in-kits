@@ -17,12 +17,17 @@ Unknown: document approved brand principles, visual tone and source of truth.
 
 Unknown: document color, typography, spacing, shape and motion tokens, their
 implementation mappings, supported modes and ownership. Record foreground and
-background pairings, not just individual colors.
+background pairings, not just individual colors. Identify the owner and
+authoritative source for each mapping; resolve conflicting sources with that
+owner rather than assuming this document overrides implementation.
 
 ## Component Rules
 
 Unknown: document existing component libraries, interaction states, responsive
 behavior, reusable primitives and project-specific patterns to avoid.
+Record required approval for changes and compare token mappings against the
+installed framework's theme and representative rendered states after changes.
+Track unresolved drift and unverified modes in the handoff.
 
 ## Accessibility
 

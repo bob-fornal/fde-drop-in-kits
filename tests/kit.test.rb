@@ -89,6 +89,9 @@ class KitTest < Minitest::Test
       ids << scenario.fetch("id")
       refute_empty scenario.fetch("prompt")
       refute_empty scenario.fetch("evidence")
+      fixture = File.expand_path(scenario.fetch("fixture"), ROOT)
+      assert fixture.start_with?(File.join(ROOT, "tests/fixtures/")), "Fixture outside tests/fixtures"
+      assert Dir.exist?(fixture), "Missing fixture: #{fixture}"
       KITS.each do |kit|
         assert File.file?(File.join(ROOT, kit, ".claude/skills", scenario.fetch("skill"), "SKILL.md"))
       end

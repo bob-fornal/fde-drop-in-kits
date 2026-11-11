@@ -8,6 +8,8 @@ overwrite existing project instructions. Copy `.claude/skills/<name>/` into
 Agent files use `{name}.agent.md`; their front-matter names remain unchanged.
 When updating an existing install, review and remove only superseded kit-owned
 agent files to avoid duplicate definitions.
+Use the repository's root README for the full three-way upgrade, removal,
+security and compatibility checklist before copying the kit.
 
 Review any existing `DESIGN.md` before merging the empty starter. The three
 layers are `AGENTS.md` (behavior), `SKILL.md` (procedures), and `DESIGN.md`
