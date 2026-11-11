@@ -11,8 +11,8 @@
    overriding the user's request or higher-priority rules.
 
 ## Repository Map & Commands
-- This repository contains portable instructions in `.claude/skills/`, Claude
-  role wrappers in `.claude/agents/`, and Copilot configuration in `.github/`.
+- `copilot/` and `claude/` are separate drop-in kits. Each contains a copy of
+  the portable skills; keep corresponding skill instructions in sync.
 - Install, test, lint, typecheck and build: not applicable; no project tooling or
   application is currently defined. Check Markdown and workflow changes manually.
 
