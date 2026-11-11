@@ -5,6 +5,9 @@ existing `CLAUDE.md`, `AGENTS.md`, `REVIEW.md`, and `.claude/` files. Never
 overwrite existing project instructions. Copy `.claude/skills/<name>/` into
 `~/.claude/skills/` instead for personal use. Copy the role wrappers in
 `.claude/agents/` along with the skills they reference.
+Agent files use `{name}.agent.md`; their front-matter names remain unchanged.
+When updating an existing install, review and remove only superseded kit-owned
+agent files to avoid duplicate definitions.
 
 Review any existing `DESIGN.md` before merging the empty starter. The three
 layers are `AGENTS.md` (behavior), `SKILL.md` (procedures), and `DESIGN.md`

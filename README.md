@@ -11,6 +11,15 @@ kit's contents into a client repository, not the parent folder. Review and merge
 with existing files instead of overwriting them. The instructions are starting
 points, not a substitute for project rules or approval.
 
+Agent definitions use `{name}.agent.md` filenames, such as
+`architect.agent.md`. Their front-matter names are unchanged. When updating an
+installed kit, review and remove only the superseded, kit-owned agent files to
+avoid duplicate definitions; never delete a client's own agents.
+
+Platform entrypoints retain their required names, including `AGENTS.md`,
+`CLAUDE.md`, `SKILL.md` and `.github/copilot-instructions.md`. `DESIGN.md`
+and `REVIEW.md` are shared project documents rather than named agent files.
+
 The skills cover onboarding, impact analysis, reproduction, implementation,
 self-review and handoff, as well as planning, architecture, testing, security,
 migrations, refactoring, release and incident analysis. For UI work, use

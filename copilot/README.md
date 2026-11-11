@@ -16,6 +16,9 @@ The optional `agent-templates/` directory contains Copilot custom-agent
 definitions for design and accessibility; it is not automatically discovered.
 After reviewing and adapting their tools for the target client, copy the desired
 `.agent.md` files into the target repository's `.github/agents/` directory.
+Agent filenames use `{name}.agent.md`; their front-matter names remain unchanged.
+When updating an existing install, review and remove only superseded kit-owned
+agent files to avoid duplicate definitions.
 The templates are behavioral guidance, not access controls or a WCAG
 conformance guarantee.
 
