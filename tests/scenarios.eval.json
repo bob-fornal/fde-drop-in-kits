@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cold-onboarding",
+    "skill": "onboard",
+    "prompt": "Map this unfamiliar repository; do not assume unavailable install or test commands.",
+    "evidence": ["entrypoint and manifest paths", "verified or unavailable commands", "unknowns and assumptions"]
+  },
+  {
+    "id": "changed-shared-function",
+    "skill": "blast-radius",
+    "prompt": "Before editing a shared function, trace its callers and affected tests.",
+    "evidence": ["caller paths", "downstream or contract risks", "test coverage and gaps"]
+  },
+  {
+    "id": "client-integration",
+    "skill": "integration-debug",
+    "prompt": "Investigate an intermittent third-party API failure without exposing customer data.",
+    "evidence": ["sanitized reproduction", "boundary and correlation evidence", "hypotheses and blockers"]
+  }
+]

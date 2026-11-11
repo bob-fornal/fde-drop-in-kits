@@ -11,3 +11,5 @@ description: Prepare an evidence-based handoff and concise pull request descript
 4. Draft a PR description with summary, motivation, tests and their results,
    limitations, and deployment or rollback notes when relevant. Do not claim
    checks passed or changes were deployed without evidence.
+5. Record evidence, assumptions, risks, checks/results, blockers and owner/next
+   action; hand operational follow-ups to the agreed client owner or mark unknown.

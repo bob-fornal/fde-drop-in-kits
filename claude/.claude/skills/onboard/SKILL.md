@@ -16,3 +16,6 @@ description: Map an unfamiliar repository and propose evidence-backed agent inst
    bullets, keeping the root file under 150 lines. Preserve existing instructions;
    distinguish inferred or untested commands from verified ones. Ask for review
    before replacing conflicting or unverified guidance.
+5. Report evidence, assumptions, risks, checks/results, blockers and owner/next
+   action; mark missing information unknown. Use `/fde-engagement` for access
+   readiness and client ownership.

@@ -22,3 +22,8 @@ description: Discover, create, and maintain an evidence-backed DESIGN.md design 
    existing project checks and any already-installed DESIGN.md validator using
    its documented command. Report missing tooling, unresolved values and checks
    not run; do not install a validator or claim validation without evidence.
+6. Record the design owner, approval process and authoritative implementation
+   source for each token; if sources conflict, stop and ask the owner rather than
+   assuming precedence. On each design change compare documented values against
+   theme files and rendered component states for the installed stack and modes.
+   Document drift, approvals and unverified mappings for handoff.

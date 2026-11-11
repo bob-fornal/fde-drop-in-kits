@@ -11,3 +11,5 @@ description: Trace dependencies, contracts, and coverage before changing unfamil
 3. Find tests for the target and affected callers; identify missing coverage.
 4. Before editing, report affected files, breaking-change risks, coverage gaps and
    unknowns with supporting paths. Revisit the analysis if scope changes.
+5. Include evidence, assumptions, risks, checks/results, blockers and owner/next
+   action; distinguish unverified external dependencies from confirmed impacts.
