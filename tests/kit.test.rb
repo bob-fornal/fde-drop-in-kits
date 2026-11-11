@@ -106,4 +106,33 @@ class KitTest < Minitest::Test
     end
     assert_equal ids.length, ids.uniq.length
   end
+
+  def test_documentation_skill_contract_and_workflow_integration
+    KITS.each do |kit|
+      skill = File.join(ROOT, kit, ".claude/skills/document-slices/SKILL.md")
+      assert File.file?(skill), "Missing documentation skill in #{kit}"
+      body = File.read(skill)
+      %w[vertical symbol intent revision stale].each { |term| assert_includes body.downcase, term }
+      assert_match(/line|position/i, body)
+      %w[onboard implement-issue wrapup].each do |workflow|
+        assert_includes File.read(File.join(ROOT, kit, ".claude/skills", workflow, "SKILL.md")), "`/document-slices`"
+      end
+      assert_includes File.read(File.join(ROOT, kit, "AGENTS.md")), "agent"
+    end
+    assert JSON.parse(File.read(File.join(ROOT, "tests/scenarios.eval.json"))).any? { |s| s["skill"] == "document-slices" }
+  end
+
+  def test_slice_example_references_fixture_symbols
+    path = File.join(ROOT, "claude/.claude/skills/document-slices/references/slice.schema.md")
+    match = File.read(path).match(/```yaml\n---\n(.*?)\n---\n```/m)
+    refute_nil match
+    document = YAML.safe_load(match[1], permitted_classes: [], aliases: false)
+    document.fetch("entries").each do |entry|
+      source = File.readlines(File.join(ROOT, "tests/fixtures/legacy-app", entry.fetch("path")))
+      first, last = entry.fetch("lines").split("-").map(&:to_i)
+      assert first.positive? && first <= last && last <= source.length, entry.inspect
+      assert_includes source[(first - 1)..(last - 1)].join, entry.fetch("symbol").split(".").last
+      assert_equal "#{entry.fetch("path")}:#{entry.fetch("lines")}", entry.fetch("evidence")
+    end
+  end
 end

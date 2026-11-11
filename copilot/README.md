@@ -30,6 +30,8 @@ architecture. Use `/blast-radius` before changes, `/repro` for bugs,
 and `/wrapup` for handoff. Other skills cover the remaining SDLC phases.
 Skill availability and invocation depend on the client; alternatively ask the
 agent to follow the relevant `SKILL.md` directly.
+Use `/document-slices` for agent-oriented feature documentation with verified
+source locations and intent. Review and refresh positions when code changes.
 
 Adapt `.github/workflows/copilot-setup-steps.yml` to the actual runtime and
 lockfile. This kit's setup step is intentionally a no-op; it installs nothing.

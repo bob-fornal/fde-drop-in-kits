@@ -24,6 +24,8 @@ architecture. Use `/blast-radius` before changes, `/repro` for bugs,
 `/implement-issue` and `/tdd` for implementation, `/reflect` for checkpoints,
 and `/wrapup` for handoff. Other skills cover the remaining SDLC phases.
 Skills are also readable as runbooks directly.
+Use `/document-slices` for agent-oriented feature documentation with verified
+source locations and intent. Review and refresh positions when code changes.
 
 The role wrappers define behavioral boundaries, not a security sandbox. Review
 the tool permissions and configure actual access controls appropriate to the

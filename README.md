@@ -24,6 +24,9 @@ The skills cover onboarding, impact analysis, reproduction, implementation,
 self-review and handoff, as well as planning, architecture, testing, security,
 migrations, refactoring, release and incident analysis. `/fde-engagement` covers
 client readiness and handoff; `/integration-debug` covers integration failures.
+Use `/document-slices` to produce agent-oriented documentation grouped by
+feature, with verified paths, symbols, line ranges, intent and source state.
+Line positions are snapshots: revalidate them after source changes.
 For UI work, use
 `/manage-design`, `/design-ui-component` and `/accessibility-audit`. Invoke
 `/onboard` first where supported, or ask the agent to follow its `SKILL.md` as a

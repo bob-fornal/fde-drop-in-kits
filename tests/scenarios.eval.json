@@ -14,6 +14,13 @@
     "evidence": ["identifies checkout.py as caller of service.display_total", "identifies checkout_total as downstream behavior and contract risks", "identifies test_checkout.py as indirect coverage and notes gaps"]
   },
   {
+    "id": "document-checkout-slice",
+    "skill": "document-slices",
+    "fixture": "tests/fixtures/legacy-app",
+    "prompt": "Document the checkout feature as a vertical slice with the source locations and intent needed by a future agent.",
+    "evidence": ["identifies checkout.py:checkout_total and service.py:display_total with verified line positions and intent", "identifies test_checkout.py coverage and its relevant symbol and position", "records the inspected source revision or working-tree state and notes unresolved intent without guessing"]
+  },
+  {
     "id": "client-integration",
     "skill": "integration-debug",
     "fixture": "tests/fixtures/legacy-app",

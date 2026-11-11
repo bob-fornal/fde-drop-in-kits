@@ -19,3 +19,6 @@ description: Map an unfamiliar repository and propose evidence-backed agent inst
 5. Report evidence, assumptions, risks, checks/results, blockers and owner/next
    action; mark missing information unknown. Use `/fde-engagement` for access
    readiness and client ownership.
+6. When documentation is in scope, use `/document-slices` to map relevant
+   vertical slices and verified source locations; do not overwrite existing docs.
+   For a project-wide map, enumerate journeys and report unmapped areas.

@@ -13,3 +13,5 @@ description: Trace dependencies, contracts, and coverage before changing unfamil
    unknowns with supporting paths. Revisit the analysis if scope changes.
 5. Include evidence, assumptions, risks, checks/results, blockers and owner/next
    action; distinguish unverified external dependencies from confirmed impacts.
+   Give repository-relative paths, symbols and verified line positions when
+   available; treat prior slice documentation as an index, not current proof.

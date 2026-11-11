@@ -14,3 +14,5 @@ description: Resolve an issue through scoped planning, testing, implementation, 
 4. Run relevant existing tests, lint, typecheck and build; report failures and
    unavailable checks. Apply `/reflect`, remove only task-owned tracking files,
    and use `/wrapup` to prepare the handoff.
+5. When documentation is in scope, use `/document-slices` to update affected
+   slice records, including shared symbols and changed source positions.

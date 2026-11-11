@@ -13,3 +13,5 @@ description: Prepare an evidence-based handoff and concise pull request descript
    checks passed or changes were deployed without evidence.
 5. Record evidence, assumptions, risks, checks/results, blockers and owner/next
    action; hand operational follow-ups to the agreed client owner or mark unknown.
+6. Where documentation updates are authorized, use `/document-slices` to check
+   affected slice records against current source and flag stale positions.
