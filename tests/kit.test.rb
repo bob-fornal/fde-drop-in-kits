@@ -31,6 +31,13 @@ class KitTest < Minitest::Test
         assert_equal File.basename(File.dirname(path)), name
         assert_kind_of String, data["description"], path
         refute_empty data["description"].strip
+        File.read(path).scan(%r{`/([a-z0-9-]+)`}).flatten.each do |reference|
+          assert File.file?(File.join(ROOT, kit, ".claude/skills", reference, "SKILL.md")),
+                 "#{path}: missing skill #{reference}"
+        end
+        File.read(path).scan(%r{\.claude/skills/[a-z0-9-]+/[a-zA-Z0-9_./-]+}).each do |reference|
+          assert File.file?(File.join(ROOT, kit, reference)), "#{path}: missing #{reference}"
+        end
         names << name
       end
       assert_equal names.length, names.uniq.length, "Duplicate skill names in #{kit}"
@@ -68,6 +75,7 @@ class KitTest < Minitest::Test
       assert_equal names.length, names.uniq.length, "Duplicate agent names in #{kit}"
     end
     assert_empty files("claude/.claude/agents/*.md").reject { |p| p.end_with?(".agent.md") }
+    assert_empty files("copilot/agent-templates/*.md").reject { |p| p.end_with?(".agent.md") }
   end
 
   def test_local_markdown_links
