@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cold-onboarding",
+    "skill": "onboard",
+    "fixture": "tests/fixtures/legacy-app",
+    "prompt": "Map this unfamiliar repository; do not assume unavailable install or test commands.",
+    "evidence": ["identifies checkout.py, service.py and requirements.txt; notes no verified application entrypoint", "reports test command and whether actually run", "separates assumptions and unavailable project commands from verified facts"]
+  },
+  {
+    "id": "changed-shared-function",
+    "skill": "blast-radius",
+    "fixture": "tests/fixtures/legacy-app",
+    "prompt": "Before editing display_total in service.py, trace its callers and affected tests.",
+    "evidence": ["identifies checkout.py as caller of service.display_total", "identifies checkout_total as downstream behavior and contract risks", "identifies test_checkout.py as indirect coverage and notes gaps"]
+  },
+  {
+    "id": "document-checkout-slice",
+    "skill": "document-slices",
+    "fixture": "tests/fixtures/legacy-app",
+    "prompt": "Document the checkout feature as a vertical slice with the source locations and intent needed by a future agent.",
+    "evidence": ["identifies checkout.py:checkout_total and service.py:display_total with verified line positions and intent", "identifies test_checkout.py coverage and its relevant symbol and position", "records the inspected source revision or working-tree state and notes unresolved intent without guessing"]
+  },
+  {
+    "id": "client-integration",
+    "skill": "integration-debug",
+    "fixture": "tests/fixtures/legacy-app",
+    "prompt": "A stakeholder reports an intermittent third-party API failure, but no integration code or logs are available here. Investigate safely without exposing customer data.",
+    "evidence": ["states reproduction is not confirmed without inputs or logs", "requests authorized sanitized boundary and correlation evidence", "separates hypotheses from facts and identifies missing integration evidence as a blocker"]
+  }
+]
